@@ -89,3 +89,16 @@ img {
         gap: 4vh;
     }
 }
+.fancy-title {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 3vh;
+  }
+  
