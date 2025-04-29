@@ -90,7 +90,7 @@ img {
     }
 }
 .fancy-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     background: linear-gradient(90deg, #00c6ff, #0072ff);
     -webkit-background-clip: text;
