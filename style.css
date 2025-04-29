@@ -22,6 +22,7 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 5vh;
+    padding-top: 0px;
 }
 
 /* Logo */
@@ -53,22 +54,19 @@ img {
 .backers {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     gap: 3vw;
     width: 100%;
     max-width: 60vw;
-    margin-top: 2vh;
-}
-
-.backer-image {
-    /* inherits shared img styles */
-    
+    margin: 2vh auto;
 }
 .backer-image {
-    width: 47%; /* Roughly half with some spacing */
+    width: 47%; /* ensures two columns roughly */
+    max-width: 300px;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 /* Responsive design */
