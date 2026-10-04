@@ -1,33 +1,233 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archanion Engineering</title>
-    <link rel="stylesheet" href="style.css"> <!-- optional CSS link -->
-  </head>
-  <body class="vsc-initialized">
-    <div class="container flex">
-      <img class="logo" src="images/Black[1].png" alt="Archanion Engineering Logo">
-      
-      <div class="text text fancy-title">Unmanned Aerial System</div>
+<html><head>
+<meta charset="utf-8">
+<title>Archanion</title>
+<meta name="description" content="Archanion">
+<link rel="icon" href="assets/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* Inter (display + body) and JetBrains Mono (technical/label) — free equivalents for Helvetica Now Display, per brand spec. Self-hosted-equivalent via Fontsource CDN (pinned). */
+@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url("assets/inter-300.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url("assets/inter-400.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url("assets/inter-500.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url("assets/inter-700.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:900;font-display:swap;src:url("assets/inter-900.woff2") format('woff2')}
+@font-face{font-family:'Inter Display';font-style:normal;font-weight:500;font-display:swap;src:url("assets/inter-500.woff2") format('woff2')}
+@font-face{font-family:'Inter Display';font-style:normal;font-weight:700;font-display:swap;src:url("assets/inter-700.woff2") format('woff2')}
+@font-face{font-family:'Inter Display';font-style:normal;font-weight:900;font-display:swap;src:url("assets/inter-900.woff2") format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url("assets/jbmono-400.woff2") format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url("assets/jbmono-500.woff2") format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:700;font-display:swap;src:url("assets/jbmono-700.woff2") format('woff2')}
+</style>
+<style>:root{
+--black-0:#0A0A0A;--black-1:#111111;--panel-1:#161616;--border-1:#262626;--border-2:#333333;
+--text-1:#F5F5F5;--text-2:#9A9A9A;--text-3:#5C5C5C;
+--accent:#DFF140;--accent-ink:#0A0A0A;
+--red:#FF3B30;--cyan:#4DD0E1;--amber:#FFB000;--grey-neutral:#8A8A8A;
+--white-0:#FFFFFF;--white-1:#F7F7F5;--paper-1:#EDEDEA;--light-border:#DEDEDA;
+--light-text-1:#0A0A0A;--light-text-2:#5C5C5C;
+/* semantic aliases */
+--surface-canvas:var(--black-0);--surface-panel:var(--panel-1);--surface-raised:#1B1B1B;
+--border-hairline:var(--border-1);--border-strong:var(--border-2);
+--text-primary:var(--text-1);--text-secondary:var(--text-2);--text-tertiary:var(--text-3);
+--status-live:var(--accent);--status-hostile:var(--red);--status-friendly:var(--cyan);--status-unknown:var(--amber);--status-neutral:var(--grey-neutral);
+--surface-canvas-light:var(--white-1);--surface-panel-light:var(--paper-1);--border-light:var(--light-border);
+}
+</style>
+<style>:root{
+--font-display:'Inter Display',Inter,-apple-system,sans-serif;
+--font-body:'Inter',-apple-system,sans-serif;
+--font-mono:'JetBrains Mono',ui-monospace,monospace;
+--tracking-tight:-0.02em;--tracking-mono:0.08em;
+--lh-display:1.02;/* @kind other */--lh-body:1.5;/* @kind other */--lh-mono:1.4;/* @kind other */
+--fs-display-xl:96px;--fs-display-lg:64px;--fs-display-md:44px;--fs-headline:28px;
+--fs-body-lg:18px;--fs-body:15px;--fs-body-sm:13px;
+--fs-mono-lg:13px;--fs-mono:12px;--fs-mono-sm:11px;
+}
+</style>
+<style>:root{
+--sp-1:4px;--sp-2:8px;--sp-3:16px;--sp-4:24px;--sp-5:32px;--sp-6:48px;--sp-7:64px;--sp-8:96px;
+--radius-0:0px;--radius-1:2px;
+--grid-gap:8px;--grid-gap-dense:4px;
+--motion-fast:120ms;/* @kind other */--motion-med:200ms;/* @kind other */--motion-ease:cubic-bezier(.2,.6,.2,1);/* @kind other */
+}
+</style>
+<style>/* Inter (display + body) and JetBrains Mono (technical/label) — free equivalents for Helvetica Now Display, per brand spec. Self-hosted-equivalent via Fontsource CDN (pinned). */
+@font-face{font-family:'Inter';font-style:normal;font-weight:300;font-display:swap;src:url("assets/inter-300.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url("assets/inter-400.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url("assets/inter-500.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url("assets/inter-700.woff2") format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:900;font-display:swap;src:url("assets/inter-900.woff2") format('woff2')}
+@font-face{font-family:'Inter Display';font-style:normal;font-weight:500;font-display:swap;src:url("assets/inter-500.woff2") format('woff2')}
+@font-face{font-family:'Inter Display';font-style:normal;font-weight:700;font-display:swap;src:url("assets/inter-700.woff2") format('woff2')}
+@font-face{font-family:'Inter Display';font-style:normal;font-weight:900;font-display:swap;src:url("assets/inter-900.woff2") format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url("assets/jbmono-400.woff2") format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url("assets/jbmono-500.woff2") format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:700;font-display:swap;src:url("assets/jbmono-700.woff2") format('woff2')}
 
-      <img class="flag" src="images/flag-of-india.webp" alt="Flag of India">
+:root{
+--black-0:#0A0A0A;--black-1:#111111;--panel-1:#161616;--border-1:#262626;--border-2:#333333;
+--text-1:#F5F5F5;--text-2:#9A9A9A;--text-3:#5C5C5C;
+--accent:#DFF140;--accent-ink:#0A0A0A;
+--red:#FF3B30;--cyan:#4DD0E1;--amber:#FFB000;--grey-neutral:#8A8A8A;
+--white-0:#FFFFFF;--white-1:#F7F7F5;--paper-1:#EDEDEA;--light-border:#DEDEDA;
+--light-text-1:#0A0A0A;--light-text-2:#5C5C5C;
+/* semantic aliases */
+--surface-canvas:var(--black-0);--surface-panel:var(--panel-1);--surface-raised:#1B1B1B;
+--border-hairline:var(--border-1);--border-strong:var(--border-2);
+--text-primary:var(--text-1);--text-secondary:var(--text-2);--text-tertiary:var(--text-3);
+--status-live:var(--accent);--status-hostile:var(--red);--status-friendly:var(--cyan);--status-unknown:var(--amber);--status-neutral:var(--grey-neutral);
+--surface-canvas-light:var(--white-1);--surface-panel-light:var(--paper-1);--border-light:var(--light-border);
+}
 
-      <div class="text  ">
-        
-        <span class="made-in-india">Made in India</span>
-        <br>
-        Contact: 
-        <a href="mailto:archanionengineering@gmail.com" class="email-link">archanionengineering@gmail.com</a>
+:root{
+--font-display:'Inter Display',Inter,-apple-system,sans-serif;
+--font-body:'Inter',-apple-system,sans-serif;
+--font-mono:'JetBrains Mono',ui-monospace,monospace;
+--tracking-tight:-0.02em;--tracking-mono:0.08em;
+--lh-display:1.02;/* @kind other */--lh-body:1.5;/* @kind other */--lh-mono:1.4;/* @kind other */
+--fs-display-xl:96px;--fs-display-lg:64px;--fs-display-md:44px;--fs-headline:28px;
+--fs-body-lg:18px;--fs-body:15px;--fs-body-sm:13px;
+--fs-mono-lg:13px;--fs-mono:12px;--fs-mono-sm:11px;
+}
+
+:root{
+--sp-1:4px;--sp-2:8px;--sp-3:16px;--sp-4:24px;--sp-5:32px;--sp-6:48px;--sp-7:64px;--sp-8:96px;
+--radius-0:0px;--radius-1:2px;
+--grid-gap:8px;--grid-gap-dense:4px;
+--motion-fast:120ms;/* @kind other */--motion-med:200ms;/* @kind other */--motion-ease:cubic-bezier(.2,.6,.2,1);/* @kind other */
+}
+
+</style>
+<script src="assets/design-system.js"></script>
+<style>body{margin:0;background:var(--black-0)}a{color:var(--text-1);text-decoration:none}a:hover{color:var(--accent)}</style>
+</helmet>
+
+<div style="background:var(--black-0);color:var(--text-1);font-family:var(--font-body);min-height:100vh">
+  <div style="height:3px;background:var(--accent);width:38%"></div>
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:16px 48px;border-bottom:1px solid var(--border-1);background:var(--black-1);flex-wrap:wrap;gap:16px">
+    <div style="display:flex;align-items:center;gap:24px">
+      <img src="assets/logo.png" style="height:56px;margin:-12px 0" alt="Archanion">
+      <nav style="display:flex;gap:20px;white-space:nowrap;font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em">
+        <a href="#systems">SYSTEMS</a><a href="#console">C2</a><a href="#deploy">DEPLOY</a><a href="#company">COMPANY</a>
+      </nav>
+    </div>
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="white-space:nowrap"><x-import component-from-global-scope="ArchanionDesignSystem_9f508c.StatusChip" status="live" label="SYSTEMS NOMINAL" hint-size="140px,16px"></x-import></span>
+      <a href="#contact"><x-import component-from-global-scope="ArchanionDesignSystem_9f508c.Button" size="sm" hint-size="140px,32px">Request access</x-import></a>
+    </div>
+  </header>
+
+  <section style="padding:140px 48px 110px;border-bottom:1px solid var(--border-1)">
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-2);margin-bottom:24px">[C2] &nbsp;AUTONOMOUS COMMAND &amp; CONTROL</div>
+    <h1 style="font-family:var(--font-display);font-weight:900;font-size:clamp(48px,9vw,128px);letter-spacing:-0.02em;line-height:1;text-transform:uppercase;margin:0 0 32px;max-width:1100px">See First.<br>Act First.</h1>
+    <p style="font-size:18px;color:var(--text-2);max-width:560px;line-height:1.5;margin:0 0 40px">Command and control for autonomous UAVs, counter-drone interceptors and edge AI. Deployed in under one month.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#contact"><x-import component-from-global-scope="ArchanionDesignSystem_9f508c.Button" hint-size="160px,40px">Request access</x-import></a>
+      <a href="#systems"><x-import component-from-global-scope="ArchanionDesignSystem_9f508c.Button" variant="secondary" hint-size="140px,40px">View systems</x-import></a>
+    </div>
+  </section>
+
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border-1);border-bottom:1px solid var(--border-1)">
+    <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+      <div style="background:var(--black-0);padding:32px 48px">
+        <div style="font-family:var(--font-display);font-weight:300;font-size:48px;letter-spacing:-0.02em;line-height:1">{{ s.v }}<span style="font-family:var(--font-mono);font-size:14px;color:var(--text-2);margin-left:8px">{{ s.u }}</span></div>
+        <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);margin-top:12px">{{ s.l }}</div>
       </div>
+    </sc-for>
+  </section>
 
-      <div class="text-backed-by section-heading">Backed By</div>
+  <section id="systems" style="padding:96px 48px;border-bottom:1px solid var(--border-1)">
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);margin-bottom:12px">01 / SYSTEMS</div>
+    <h2 style="font-family:var(--font-display);font-weight:800;font-size:48px;letter-spacing:-0.02em;line-height:1;text-transform:uppercase;margin:0 0 48px">Own the edge.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border-1)">
+      <sc-for list="{{ systems }}" as="s" hint-placeholder-count="3">
+        <div style="background:var(--black-0);padding:32px;display:flex;flex-direction:column;gap:16px">
+          <div style="aspect-ratio:4/3;background:var(--black-1);border:1px solid var(--border-1);display:flex;align-items:flex-end;padding:12px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3)">RENDER PLACEHOLDER · {{ s.tag }}</div>
+          <div><span style="display:inline-block;font-family:var(--font-mono);font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-2);border:1px solid var(--border-1);padding:3px 8px">[{{ s.tag }}]</span></div>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-0.02em">{{ s.name }}</div>
+          <div style="font-size:14px;color:var(--text-2);line-height:1.5">{{ s.line }}</div>
+          <div style="margin-top:auto">
+            <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.SpecRow" label="{{ s.l1 }}" value="{{ s.v1 }}" unit="{{ s.u1 }}" hint-size="100%,40px"></x-import>
+            <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.SpecRow" label="{{ s.l2 }}" value="{{ s.v2 }}" unit="{{ s.u2 }}" hint-size="100%,40px"></x-import>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
 
-      <div class="backers flex">
-        <img class="backer-image" src="images/logoback2.png" alt="gradCapital">
-        <!-- <img class="backer-image" src="images/emergent-ventures-india.webp" alt="Emergent Ventures India"> -->
+  <section id="console" style="padding:96px 48px;border-bottom:1px solid var(--border-1);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px;align-items:center">
+    <div>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);margin-bottom:12px">02 / C2</div>
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:48px;letter-spacing:-0.02em;line-height:1;text-transform:uppercase;margin:0 0 24px">One console.<br>Every asset.</h2>
+      <p style="font-size:16px;color:var(--text-2);line-height:1.5;max-width:460px;margin:0 0 24px">Live map, tracks, tasking and sensor feeds in a single operator view. Built dark-only for the field.</p>
+      <div style="display:flex;gap:24px;flex-wrap:wrap">
+        <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.StatusChip" status="live" label="TRACK LIVE" hint-size="100px,16px"></x-import>
+        <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.StatusChip" status="degraded" hint-size="100px,16px"></x-import>
+        <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.StatusChip" status="lost" hint-size="100px,16px"></x-import>
       </div>
     </div>
-  </body>
-</html>
+    <div style="aspect-ratio:16/10;background:var(--black-1);border:1px solid var(--border-1);display:flex;align-items:flex-end;padding:16px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3)">CONSOLE SCREENSHOT PLACEHOLDER</div>
+  </section>
+
+  <section id="deploy" style="padding:96px 48px;border-bottom:1px solid var(--border-1)">
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);margin-bottom:12px">03 / DEPLOY</div>
+    <h2 style="font-family:var(--font-display);font-weight:800;font-size:48px;letter-spacing:-0.02em;line-height:1;text-transform:uppercase;margin:0 0 48px">Fielded in &lt;30 days.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+      <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.StepBlock" number="01" title="Integrate" hint-size="100%,80px">Connect existing sensors and airframes.</x-import>
+      <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.StepBlock" number="02" title="Validate" hint-size="100%,80px">Range trials with your evaluators.</x-import>
+      <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.StepBlock" number="03" title="Deploy" hint-size="100%,80px">Operator training and field handover.</x-import>
+    </div>
+  </section>
+
+  <section id="company" style="padding:96px 48px;border-bottom:1px solid var(--border-1);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px">
+    <div>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);margin-bottom:12px">04 / COMPANY</div>
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:48px;letter-spacing:-0.02em;line-height:1;text-transform:uppercase;margin:0">Built in India.<br>For the sky.</h2>
+    </div>
+    <div>
+      <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.SpecRow" label="Entity" value="Archanion Engineering Pvt. Ltd." hint-size="100%,40px"></x-import>
+      <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.SpecRow" label="Base" value="Ghaziabad, UP" hint-size="100%,40px"></x-import>
+      <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.SpecRow" label="Programme" value="iDEX · Top-attack anti-tank mine" hint-size="100%,40px"></x-import>
+      <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.SpecRow" label="CIN" value="U62099UP2023PTC187005" hint-size="100%,40px"></x-import>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:120px 48px;border-bottom:1px solid var(--border-1);display:flex;flex-direction:column;gap:32px;align-items:flex-start">
+    <h2 style="font-family:var(--font-display);font-weight:900;font-size:clamp(40px,7vw,96px);letter-spacing:-0.02em;line-height:1;text-transform:uppercase;margin:0">Deny the sky.</h2>
+    <p style="font-size:16px;color:var(--text-2);max-width:460px;line-height:1.5;margin:0">Access is limited to military operators, evaluators and procurement teams.</p>
+    <x-import component-from-global-scope="ArchanionDesignSystem_9f508c.Button" hint-size="160px,40px">Request access</x-import>
+  </section>
+
+  <footer style="padding:32px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <img src="assets/logo.png" style="height:44px;opacity:0.6;margin:-12px 0" alt="Archanion">
+    <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3)">ARCHANION ENGINEERING PVT LTD · GHAZIABAD, INDIA</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      stats: [
+        { v: '<200', u: 'ms', l: 'TRACK-TO-TASK LATENCY' },
+        { v: '>8', u: 'nm', l: 'INTERCEPTOR RANGE' },
+        { v: '12+', u: 'hr', l: 'ISR ENDURANCE' },
+        { v: '<30', u: 'days', l: 'TIME TO DEPLOY' }
+      ],
+      systems: [
+        { tag: 'C-UAS', name: 'Interceptor Mk.II', line: 'Counter-drone interceptor with edge-AI terminal guidance.', l1: 'Range', v1: '>8', u1: 'nm', l2: 'Guidance', v2: 'Edge AI', u2: '' },
+        { tag: 'ISR', name: 'Persistent Watch', line: 'Long-endurance ISR platform for contested airspace.', l1: 'Endurance', v1: '12+', u1: 'hr', l2: 'Link', v2: 'Contested', u2: '' },
+        { tag: 'C2', name: 'Archanion Console', line: 'Unified tasking, tracking and sensor fusion.', l1: 'Latency', v1: '<200', u1: 'ms', l2: 'Theme', v2: 'Dark only', u2: '' }
+      ]
+    };
+  }
+}
+</script>
+
+
+</body></html>
